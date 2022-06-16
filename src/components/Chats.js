@@ -11,6 +11,7 @@ const Chats = () => {
 	const history = useHistory();
 	const { user } = useAuth();
 	const [ loading, setLoading ] = useState(true);
+	const { REACT_APP_CHAT_ENGINE_PROJECT_ID, REACT_APP_CHAT_ENGINE_SECRET_KEY} = process.env;
 
 	const handleLogout = async () => {
 		await auth.signOut();
@@ -34,9 +35,9 @@ const Chats = () => {
 
 		axios.get('https://api.chatengine.io/users/me/', {
 			headers:{
-				"project-id":"e19c9faa-802c-475d-af4f-fcb39dfe8de3",
-				"user-name":user.email,
-				"user-secret":user.uid
+				"project-id": REACT_APP_CHAT_ENGINE_PROJECT_ID,
+				"user-name": user.email,
+				"user-secret": user.uid
 			}
 		})
 			.then(() => {
@@ -55,7 +56,7 @@ const Chats = () => {
 							formData,
 					{
 								headers: {
-									"PRIVATE-KEY": "ade3c477-211e-4a12-b1d6-97ebfddc5a4f"
+									"PRIVATE-KEY": REACT_APP_CHAT_ENGINE_SECRET_KEY
 								}
 							}
 						)
@@ -69,7 +70,6 @@ const Chats = () => {
 
 
 	if (!user || loading) return "Loading...";
-
 
 	return (
 		<div className="chats-page">
@@ -86,10 +86,10 @@ const Chats = () => {
 			</div>
 
 			<ChatEngine
-				heigth="calc(100vh - 66px)"
-				projectID="e19c9faa-802c-475d-af4f-fcb39dfe8de3"
-				userName={user.email}
-				userSecret={user.uid}
+				height = "calc(100vh - 66px)"
+				projectID = { REACT_APP_CHAT_ENGINE_PROJECT_ID }
+				userName = { user.email }
+				userSecret = { user.uid }
 			/>
 
 		</div>
