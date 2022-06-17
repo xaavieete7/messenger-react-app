@@ -23,4 +23,4 @@ REACT_APP_CHAT_ENGINE_SECRET_KEY = [...]
 npm start
 ```
 
-## Enjoy it :)
+### Enjoy it :)
