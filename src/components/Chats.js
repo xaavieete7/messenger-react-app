@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { ChatEngine } from "react-chat-engine";
 import { useAuth } from "../contexts/AuthContext";
@@ -75,7 +75,7 @@ const Chats = () => {
 		<div className="chats-page">
 			<div className="nav-bar">
 				<div className="logo-tab">
-					Unichat
+					Chat App
 				</div>
 				<div
 					className="logout-tab"
