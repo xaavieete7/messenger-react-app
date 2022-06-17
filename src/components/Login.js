@@ -9,7 +9,7 @@ const Login = () => {
 		<div id="login-page">
 
 			<div id="login-card">
-				<h2>Welcome to Unichat!</h2>
+				<h2>Welcome to chat app!</h2>
 
 				<div
 					className="login-button google"
