@@ -1,4 +1,4 @@
-# messenger-react-app
+# Messenger React App
 
 App created with react. Realtime chat aplication with social login and chat engine library.
 
@@ -21,5 +21,6 @@ REACT_APP_CHAT_ENGINE_SECRET_KEY = [...]
 
 ```
 npm start
+```
 
 ## Enjoy it :)
